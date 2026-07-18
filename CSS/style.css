@@ -10,10 +10,14 @@
     --secColor:#20C997;
     --thirColor:#DC3545;
     --fourColor:#6C757D;
+    --fiveColor:rgba(0, 0, 0, 0.249);
     --titleColor1:#f0f0f0;
     --starColor:#FFD700;
     --maintransition: all .5s;
 }
+/* body{
+    overflow-x: hidden;
+} */
 
 /* Start Header  */
 
@@ -57,8 +61,12 @@ header  nav{
 }
 header  nav .fa-bars{
     display: none;
+    background-color: #f0f0f0;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
 }
-header  nav ul{
+header nav .container ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -66,20 +74,20 @@ header  nav ul{
     list-style: none;
     margin: 0;
 }
-header nav ul li{
+header nav .container ul li{
     display: flex;
     align-items: center;
     margin: 0 25px;
 }
-header  nav ul li a{
+header  nav .container ul li a{
     text-decoration: none;
     color: var(--mainColor);
     transition: all .5s;
 }
-header  nav ul li a.activeLink{
+header  nav .container ul li a.activeLink{
     color: var(--secColor);
 }
-header  nav ul li a:hover{
+header  nav .container ul li a:hover{
     color: var(--secColor);
 }
 
@@ -118,7 +126,7 @@ header .container .slide .inner .content h4{
 }
 header .container .slide .inner .content button{
     display:inline-block;
-     background: none;
+    background: none;
     margin-top:50px;
     padding:12px 35px;
     border:2px solid var(--secColor);
@@ -137,18 +145,41 @@ header .container .slide .inner .content button a{
     text-decoration: none;
     color: var(--secColor);
 }
+header nav .barLink ul{
+    /* justify-content: flex-end; */
+    /* align-items: end; */
+    padding: 25px;
+    text-align: end;
+    background-color:rgba(0, 0, 0, 0.588);
+}
+header nav .barLink ul li a{
+    text-decoration: none;
+    color: white;
+}
+header nav .barLink ul li{
+    list-style: none;
+    margin: 25px 40px;
+    /* border-bottom: #F8F9FA; */
+    border-bottom: 2px solid #f8f9fa17 ;
+}
 
+@media screen and (min-width: 992px){
+    header nav .barLink ul{
+        display: none;
+    }
+
+}
 @media screen and (max-width: 992px){
 
     header  nav .fa-bars{
-    display: contents;
+        display: contents;
 
     }
     header .container .slide .inner .content h1{
         font-size: 60px;
     }
 
-    header nav ul{
+    header nav .container ul{
         display: none;
     }
 
@@ -184,20 +215,21 @@ header .container .slide .inner .content button a{
     margin-left: auto;
     margin-right: auto;
 }
-.container .main-heading{
+.main-heading{
     text-align: center;
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 10px;
+    overflow: hidden;
 }
-.container .main-heading h2{
+ .main-heading h2{
     font-size: 120px;
     font-weight: 600;
     color: var(--titleColor1);
     position: relative;
     text-transform: uppercase;
 }
-.container .main-heading p{
+.main-heading p{
     position: absolute;
     top: 45%;
     left: 50%;
@@ -207,7 +239,7 @@ header .container .slide .inner .content button a{
     color: black;
     font-weight: bolder;
 }
-.container .main-heading p::after{
+.main-heading p::after{
     width: 50px;
     height: 2px;
     background-color: var(--secColor);
@@ -367,6 +399,189 @@ position: relative;
 
 /* SERVICES END  */
 
+/* SUMMARY START */
+
+.summary .container .contentSum .row{
+    flex-wrap: wrap;
+
+}
+
+.summary .container .contentSum .elems .titleElem{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.summary .container .contentSum .elems .elem{
+    border: 2px solid rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+.summary .container .contentSum .elems .elem .year{
+    background-color: var(--secColor);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    
+}
+.contentSum .elems .elem h5{
+    margin: 10px 0;
+}
+.contentSum .elems .elem .univ {
+    color: var(--thirColor);
+    
+}
+.contentSum .elems .elem p {
+    color: var(--fourColor);
+}
+    
+
+
+.skill{
+    margin: 20px 0;
+}
+
+.lifSkills, .righSkills {
+    height: auto;
+}
+.titleSkill{
+    font-size: 17px;
+    display: inline-block;
+    /* padding: 10px 0; */
+}
+.prog{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--fiveColor);
+}
+
+
+.prog .limProg{
+    height: 100%;
+    border-radius: 10px;
+    background: var(--secColor);
+    /* width: 75%; */
+}
+
+.prog .limProg.web{width: 65%;}
+.prog .limProg.React{width: 70%;}
+.prog .limProg.htm{width: 95%;}
+.prog .limProg.Angu{width: 60%;}
+.prog .limProg.js{width: 80%;}
+.prog .limProg.Bootst{width: 99%;}
+
+.prog .limProg::after{
+    position: absolute;
+    content: "";
+    top: -25px;   
+    font-weight: bolder; 
+}
+.prog .limProg.web::after{
+    content:"65%";
+    left: 65%;
+}
+.prog .limProg.React::after{
+    content:"70%";
+    left: 70%;
+}
+.prog .limProg.htm::after{
+    content:"95%";
+    left: 95%;
+}
+.prog .limProg.Angu::after{ 
+    content:"60%";
+    left: 60%;
+}
+.prog .limProg.js::after{
+    content: "80%";
+    left: 80%;
+}
+.prog .limProg.Bootst::after{
+    content: "99%";
+    left: 99%;
+}
+.contentSum .cv{
+    text-align: center;
+}
+.contentSum .cv button{
+    padding: 8px 15px;
+    border: 2px solid black;
+    background: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: dashed;
+    border-radius: 25px;
+}
+.contentSum .cv button a{
+    text-decoration: none;
+    color:black ;
+}
+
+
+
+/* SUMMARY END */
+
+/* Portfolio Start  */
+.portfolio{
+    background-color: var(--sectionColor);
+}
+.portfolio .barPro{
+    justify-content: center;
+    align-items: center;
+}
+.portfolio .barPro button{
+    text-decoration: none;
+    background: none;
+    border: 0;
+    color: black;
+    /* font-weight: bold; */
+    position: relative;
+    transition: all .5s;
+}
+.portfolio .barPro button:hover{
+    color: var(--secColor);
+}
+.portfolio .barPro button::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secColor);
+    transition: all .5s;
+}
+.portfolio .barPro button:hover::after{
+    width: 50px;
+}
+.portfolio .container{
+    /* margin: 50px; */
+    /* gap: 20px; */
+    flex-wrap: wrap;
+}
+.item{
+    /* padding: 0 10px; */
+    overflow: hidden;
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+.portfolio .container .part{
+    flex: 1;
+    /* width: calc(100% / 3); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio .container img{
+    width: 100%;
+    display: block;
+}
+/* Portfolio End  */
+
 /* Testimonial Start  */
 
 .Testimonial .container .contentTest{
@@ -443,10 +658,84 @@ position: relative;
 
 /* Testimonial End  */
 
+/* CONTACT START  */
+.contact{
+    background-color: var(--sectionColor);
+}
+.cotentCo{
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.lifCo{
+    width: 30%;
+}
+.rightCo{
+    width: 65%;
+    text-align: center;
+}
+
+.rightCo h5,.lifCo h5{
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+.lifCo p{
+    line-height: 2;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.lifCo .linkCo a{
+     display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+}
+.lifCo .linkCo a i{
+    color: var(--secColor);
+    font-size: 18px;
+    width: 20px;
+}
+.lifCo h3{
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: 500;
+}
+.rightCo input{
+    width: 49%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.rightCo textarea{
+    width: 100%;
+    min-height: 150px;
+    margin-top: 20px;
+    padding: 12px;
+    resize: vertical;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.rightCo button{
+    background-color: var(--secColor);
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border-color: white;
+    color: white;
+}
+/* CONTACT END  */
+
+
 /* FOOTER START */
 
 footer{
     text-align: center;
+    padding: 20px;
 }
 footer p a{
     text-decoration: none;
@@ -454,4 +743,4 @@ footer p a{
 }
 
 
-/* FOOTER START */
+/* FOOTER END */
