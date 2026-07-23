@@ -209,12 +209,12 @@ header nav .barLink ul li{
 .About{
     padding: 60PX;
 }
-.About .container{
+/* .About .container{
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 .main-heading{
     text-align: center;
     position: relative;
@@ -226,7 +226,7 @@ header nav .barLink ul li{
     font-size: 120px;
     font-weight: 600;
     color: var(--titleColor1);
-    position: relative;
+    /* position: relative; */
     text-transform: uppercase;
 }
 .main-heading p{
@@ -253,7 +253,7 @@ header nav .barLink ul li{
 .About .container .contentAbout {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .About .container .contentAbout .leftContent p{
     color: var(--fourColor);
@@ -273,31 +273,27 @@ position: relative;
    list-style: none;
 }
 .About .container .contentAbout .rightContent ul li{
-    position: relative;
-    margin-bottom:15px ;
+    margin:10px 0 ;
 }
-.About .container .contentAbout .rightContent ul li::after{
-    position: absolute;
-    content: "";
-    width: 250px;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.334);
-    left: 30%;
-    transform: translateX(-50%);
-    top: 100%;
+.sperat{
+    height: .8px;
+    width: 220px;
+    background-color: var(--fourColor);
 }
+
 .About .container .contentAbout .rightContent ul li .email{
     text-decoration: none;
     color: var(--secColor);
 }
 .About .container .contentAbout .rightContent button{
     background-color: var(--secColor);
+    border: 0;
     border-radius: 25px;
     width: 150px;
     height: 50px;
     margin: 10px;
     position: absolute;
-    left: 15%;
+    left: 10%;
     border-color: white;
 }
 .About .container .contentAbout .rightContent button a{
@@ -306,7 +302,7 @@ position: relative;
 }
 .About .container .items{
     display: flex;
-    margin: 15px;
+    margin: 50px 0;
     flex-wrap: wrap;
     color: var(--fourColor);
     padding-top: 50px;
