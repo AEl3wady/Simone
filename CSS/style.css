@@ -718,11 +718,17 @@ position: relative;
 .rightCo button{
     background-color: var(--secColor);
     border-radius: 25px;
+    border: 0;
     width: 150px;
     height: 50px;
     margin: 10px;
     border-color: white;
     color: white;
+        
+}
+.rightCo button:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
 }
 @media screen and (max-width:1199px) {
     .rightCo{
