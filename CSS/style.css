@@ -476,27 +476,27 @@ position: relative;
 }
 .prog .limProg.web::after{
     content:"65%";
-    left: 65%;
+    left: 60%;
 }
 .prog .limProg.React::after{
     content:"70%";
-    left: 70%;
+    left: 65%;
 }
 .prog .limProg.htm::after{
     content:"95%";
-    left: 95%;
+    left: 90%;
 }
 .prog .limProg.Angu::after{ 
     content:"60%";
-    left: 60%;
+    left: 55%;
 }
 .prog .limProg.js::after{
     content: "80%";
-    left: 80%;
+    left: 75%;
 }
 .prog .limProg.Bootst::after{
     content: "99%";
-    left: 99%;
+    left: 94%;
 }
 .contentSum .cv{
     text-align: center;
@@ -723,6 +723,11 @@ position: relative;
     margin: 10px;
     border-color: white;
     color: white;
+}
+@media screen and (max-width:1199px) {
+    .rightCo{
+        width: 100%;
+    }
 }
 /* CONTACT END  */
 
